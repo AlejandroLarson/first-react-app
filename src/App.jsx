@@ -26,7 +26,7 @@ function App() {
           color="text.primary"
           sx={{ py: 2 }}
         >
-          CSS Mystery
+          Cat Catalog
         </Typography>
         <Typography
           variant="h5"
@@ -34,7 +34,7 @@ function App() {
           color="text.secondary"
           sx={{ mx: 10 }}
         >
-          Why isn't the CSS working?
+          Kitties available to adopt
         </Typography>
       </Container>
 
@@ -50,11 +50,10 @@ function App() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Sprinkles
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Sprinkles is a wonderful little kitten looking for a good home.
         </Typography>
       </CardContent>
       <CardActions>
@@ -73,11 +72,10 @@ function App() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Shrimp
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Shrimp is a kitten that loves attention and can play all day.
         </Typography>
       </CardContent>
       <CardActions>
@@ -96,11 +94,10 @@ function App() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Ferrari
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Ferrari is a sweet kitten discovered at a local junkyard, hence the name.
         </Typography>
       </CardContent>
       <CardActions>
