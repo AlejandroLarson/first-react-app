@@ -3,6 +3,10 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import './App.css'
 
+import DataCard from './DataCard'
+import cats from "./cats.json"
+
+
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -16,9 +20,10 @@ import Grid from '@mui/material/Grid';
 // import characters from './protagonists.json'
 
 function App() {
+  
   return (
     <>
-      
+
       <Container maxWidth="md" sx={{ mb: 4 }}>
         <Typography
           variant="h2"
@@ -38,77 +43,18 @@ function App() {
         </Typography>
       </Container>
 
-      <Container maxWidth="lg">
-  <Grid container spacing={2}>
-    <Grid>
-      <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="cat_images/cat_1.jpg"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Sprinkles
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Sprinkles is a wonderful little kitten looking for a good home.
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-      </Grid>
+      <Grid spacing = {4} container>
+        {cats.map((cat) => (
           <Grid>
-      <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="cat_images/cat_2.jpg"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Shrimp
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Shrimp is a kitten that loves attention and can play all day.
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+          <DataCard
+          title = {cat.name}
+          imageURL = {cat.image}
+          text = {cat.description}
+          
+        />
+        </Grid>
+        ))}
       </Grid>
-          <Grid>
-      <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="cat_images/cat_3.jpg"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Ferrari
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Ferrari is a sweet kitten discovered at a local junkyard, hence the name.
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-      </Grid>
-  </Grid>
-
-      </Container>
     </>
   )
 }
